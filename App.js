@@ -1,9 +1,14 @@
 import React from 'react';
+import { View } from 'react-native';
 import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 function App() {
   return (
-    <Header headerText={'Albums!!'} />
+    <View>
+      <Header headerText={'Albums!!'} />
+      <AlbumList />      
+    </View>
   );
 };
 
