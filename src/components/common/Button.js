@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, TouchableOpacity, TouchableNativeFeedback } from 'react-native';
+import { Text, View, TouchableNativeFeedback } from 'react-native';
 
 function Button ({ onPress, children }) {
     var { buttonStyle, textStyle } = styles;
