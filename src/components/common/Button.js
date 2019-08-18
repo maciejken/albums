@@ -1,18 +1,24 @@
 import React from 'react';
-import { Text, View, TouchableNativeFeedback } from 'react-native';
+import { Text, View, TouchableOpacity, TouchableNativeFeedback } from 'react-native';
 
 function Button ({ onPress, children }) {
     var { buttonStyle, textStyle } = styles;
     return (
-        <TouchableNativeFeedback
+        <TouchableOpacity
             onPress={onPress}
-            background={TouchableNativeFeedback.SelectableBackground()}>
-            <View style={buttonStyle}>
+            style={buttonStyle}>
                 <Text style={textStyle}>{children}</Text>
-            </View>
-        </TouchableNativeFeedback>
+        </TouchableOpacity>
     );
 }
+
+        // <TouchableNativeFeedback
+        //     onPress={onPress}
+        //     background={TouchableNativeFeedback.SelectableBackground()}>
+        //     <View style={buttonStyle}>
+        //         <Text style={textStyle}>{children}</Text>
+        //     </View>
+        // </TouchableNativeFeedback>
 
 var styles = {
     buttonStyle: {
