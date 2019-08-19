@@ -17,11 +17,9 @@ class LoginForm extends Component {
         const { email, password } = this.state;
         try {
             await firebase.auth().signInWithEmailAndPassword(email, password);
-            // this.onLoginSuccess();
         } catch (signInError) {
             try {
-                await firebase.auth().createUserWithEmailAndPassword(email, password);
-                // this.onLoginSuccess();          
+                await firebase.auth().createUserWithEmailAndPassword(email, password);        
             } catch (signUpError) {
                 this.onLoginError();
             }
@@ -56,7 +54,7 @@ class LoginForm extends Component {
             return <Spinner />;
         } else {
             return (
-                <Button onPress={this.onButtonPress}>
+                <Button onPress={this.onButtonPress.bind(this)}>
                     Log in
                 </Button>
             );
