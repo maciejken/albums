@@ -3,9 +3,12 @@ import { View, ActivityIndicator } from 'react-native';
 
 function Spinner({ size }) {
     return (
-        <View style={ styles.spinnerStyle }>
-            <ActivityIndicator size={size || 'large'} color='#00f' />
+        <View style={{flexDirection: 'row'}}>
+            <View style={ styles.spinnerStyle }>
+                <ActivityIndicator size={size || 'large'} color='#00f' />
+            </View>            
         </View>
+
     );        
 }
 
