@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './src/components/Header';
+import Header from './components/Header';
 
 function App() {
   return (
-    <Header headerText={'Albums!!'} />
+    <Header headerText={'Tech Stack'} />
   );
 };
 
