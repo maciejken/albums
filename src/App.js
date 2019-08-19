@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import firebase from 'firebase';
-import { Header, Button, Spinner, CardSection } from './components/common';
+import { Header, Button, Spinner } from './components/common';
 import { LoginForm } from './components';
 
 class App extends Component {
@@ -38,7 +38,7 @@ class App extends Component {
             case false:
                 return <LoginForm />;
             default:
-                return <Spinner size="large" />;
+                return <Spinner />;
         }
     }
 
