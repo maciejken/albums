@@ -1,9 +1,19 @@
 import React from 'react';
-import Header from './components/Header';
+import { Header } from './components/common';
+import LibraryList from './components/library-list';
+import { View } from 'react-native';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducers from './reducers';
 
 function App() {
   return (
-    <Header headerText={'Tech Stack'} />
+    <Provider store={createStore(reducers)}>
+      <Header headerText={'Tech Stack'} />
+      <View style={{ flex: 1 }}>
+        <LibraryList />
+      </View>
+    </Provider>
   );
 };
 
