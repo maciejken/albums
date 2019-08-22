@@ -3,6 +3,7 @@ import {
     Text,
     TouchableWithoutFeedback,
     View,
+    UIManager,
     LayoutAnimation
 } from 'react-native';
 import { connect } from 'react-redux';
@@ -11,6 +12,8 @@ import * as actions  from '../actions';
 
 class ListItem extends Component {
     componentDidUpdate() {
+        UIManager.setLayoutAnimationEnabledExperimental
+        && UIManager.setLayoutAnimationEnabledExperimental(true);
         LayoutAnimation.spring();
     }
     renderDescription() {
